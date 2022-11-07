@@ -13,6 +13,7 @@ workflows:
     jobs:
       - orb-tools/lint:
           filters: *filters
+          resource_class: medium
       - orb-tools/pack:
           filters: *filters
       - orb-tools/review:

@@ -5,7 +5,7 @@ executor: latex
 resource_class: medium
 
 parameters:
-  file: 
+  file:
     type: string
     default: "main.tex"
     description: "The main .tex file to compile into a .pdf file."
