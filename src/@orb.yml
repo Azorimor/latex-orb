@@ -1,7 +1,9 @@
 version: 2.1
 
 description: >
-  Compile latex (.tex) files to .pdf files.
+  Compile latex (.tex) files to .pdf files. Currently pdflatex and a specific
+  texlive/texlive docker image is used to compile the final .pdf file.
+  The result can be downloaded as artifact.
 # What will your orb allow users to accomplish?
 # Descriptions should be short, simple, and informative.
 

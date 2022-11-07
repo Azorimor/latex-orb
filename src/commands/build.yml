@@ -11,8 +11,9 @@ steps:
   - run:
       name: Build .tex file into .pdf
       shell: /bin/bash
-      command: |
-        mkdir -p /tmp/tex
-        pdflatex -output-directory /tmp/tex <<parameters.file>>
+      command: <<include(scripts/build.sh)>>
+      environment:
+        PARAM_FILE: <<parameters.file>>
+      
   - store_artifacts:
       path: /tmp/tex
