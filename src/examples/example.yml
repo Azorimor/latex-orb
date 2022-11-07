@@ -1,13 +1,12 @@
 description: >
-  Sample example description.
-# Provide a use-case based example for using this orb.
-# Everything in the `usage` section will be displayed in the orb registry.
-# Comments are not retained.
+  Compile a tex project into pdf. The result is available as artifact.
+
 usage:
   version: 2.1
   orbs:
-    <orb-name>: <namespace>/<orb-name>@1.2.3
+    latex-orb: azorimor/latex-orb@x.x.x
   workflows:
-    use-my-orb:
+    build:
       jobs:
-        - <orb-name>/<job-name>
+        - latex-orb/build:
+            file: /path/to/main.tex

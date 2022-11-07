@@ -1,0 +1,16 @@
+description: >
+  Compile one .tex file into .pdf file. The output is visible as artifact.
+
+executor: latex
+resource_class: medium
+
+parameters:
+  file: 
+    type: string
+    default: "main.tex"
+    description: "The main .tex file to compile into a .pdf file."
+
+steps:
+  - checkout
+  - build:
+      file: <<parameters.file>>

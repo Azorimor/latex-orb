@@ -1,0 +1,11 @@
+description: >
+  Executor with the full texlive packages.
+docker:
+  - image: "texlive/texlive:<<parameters.tag>>"
+parameters:
+  tag:
+    default: latest
+    description: >
+      Pick the specific image version for texlive:
+      https://hub.docker.com/r/texlive/texlive/tags
+    type: string
